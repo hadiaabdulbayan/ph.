@@ -1,0 +1,26 @@
+<?php
+// Define a global variable
+$globalVar = "I'm a global variable";
+
+// Function to demonstrate variable scope
+function demoScope() {
+    // Declare the global variable within the function
+    global $globalVar;
+
+    $localVar = "I'm a local variable"; // Local variable
+    echo $localVar . "<br>";
+    echo $globalVar . "<br>";
+}
+
+// Call the function
+demoScope();
+
+// Example of simple addition
+function exampleBindings() {
+    $a = 5;
+    $b = 10;
+    echo "The sum of {$a} and {$b} is " . ($a + $b) . "<br>";
+}
+
+exampleBindings();
+?>
